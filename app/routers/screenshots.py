@@ -24,8 +24,8 @@ def get_screenshot(id: str):
 async def create_screenshot(start_url: str, number_of_links: int):
     scrape_id = str(uuid.uuid1())
     
-    inserted_id = mongodb.insert_document({"_id": scrape_id, "state": "pendulum"})
+    inserted_id = mongodb.insert_document({"_id": scrape_id})
 
-    await utils.screenshot_scrapred_pages(start_url, number_of_links, scrape_id)
+    await utils.screenshot_scraped_pages(start_url, number_of_links, scrape_id)
 
     return JSONResponse(status_code=201, content={"ID": inserted_id})
