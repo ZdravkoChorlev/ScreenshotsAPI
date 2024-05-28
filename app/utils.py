@@ -4,7 +4,7 @@ from urllib.parse import urljoin, urlparse
 import shutil
 import os
 
-async def create_screenshot_of_scraped_pages(start_url: str, num_of_links: int,  dir_name: str, output_dir: str = 'screenshots'):
+async def screenshot_scraped_pages(start_url: str, num_of_links: int,  dir_name: str, output_dir: str = 'screenshots'):
     browser = await launch(headless=True, args=['--no-sandbox', '--disable-setuid-sandbox'])
     page = await browser.newPage()
 
