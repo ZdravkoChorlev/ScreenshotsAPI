@@ -28,5 +28,5 @@ Steps:
 * GET `/` - default returns the version of the service
 * GET `/isalive` - returns status of the service
 * GET `/screenshots/{id}` - returns zip file with all screenshots that were downloaded
-* POST `/screenshots` - executes scrapping of the service and makes screenshots of theweb pages
+* POST `/screenshots/?start_url=http://example.com&number_of_links=5` - executes scrapping of the service and makes screenshots of theweb pages
 * GET `/docs` - default endpoint for FastAPI applications shows the documentation of endpoints and usage
