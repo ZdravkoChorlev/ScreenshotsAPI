@@ -1,2 +1,0 @@
-class Screenshot:
-    id: str
