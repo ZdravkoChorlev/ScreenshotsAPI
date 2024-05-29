@@ -1,4 +1,3 @@
-import asyncio
 from pyppeteer import launch
 from urllib.parse import urljoin, urlparse
 import shutil
