@@ -13,7 +13,7 @@ def get_database():
 
     client = MongoClient(db_connection)
     try:
-        db = client.database_name
+        db = client[database_name]
     except Exception as e:
         raise DatabaseConnectionError(e)
 
@@ -24,7 +24,7 @@ def insert_document(document):
     collection_name = os.getenv("COLLECTION_NAME")
 
     try:
-        collection = db.collection_name
+        collection = db[collection_name]
         result = collection.insert_one(document)
         return str(result.inserted_id)
     except ConnectionError as e:
